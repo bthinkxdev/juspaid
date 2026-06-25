@@ -1,0 +1,297 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block body_class %}page-home motion-page{% endblock %}
+{% block title %}Juspaid International — Sandalwood Plantations &amp; Eco Resorts in Wayanad{% endblock %}
+
+{% block content %}
+
+<section class="hero-scroll" id="hero-scroll" data-frame-base="{% static 'img/herosection/' %}" data-frame-count="240">
+  <div class="hero-scroll__track">
+    <div class="hero-scroll__sticky">
+      <div class="hero-scroll__banner">
+        <canvas class="hero-scroll__canvas" aria-hidden="true"></canvas>
+        <div class="hero-scroll__badge">Build Your<br>Wealth<br>With Us</div>
+
+        <div class="wrap hero-scroll__content">
+          <div class="hero-scroll__slides">
+            <article class="hero-scroll__slide is-active" data-start="0" data-end="0.2">
+              <span class="eyebrow eyebrow--light">Western Ghats, Wayanad</span>
+              <h1>Grow Your Wealth<br>In Sandalwood</h1>
+              <p class="lead">Own a titled, fenced plot of Indian White Sandalwood in Pulpally, Wayanad — cultivated under IWST's Hestorium methodology, with full security infrastructure and a documented title transfer.</p>
+              <div class="hero-cta-row">
+                <a href="{% url 'group_farming' %}" class="btn btn-gold">Explore Plantation Plots</a>
+                <a href="{% url 'cave_resort' %}" class="btn btn-ghost-light">View Cave Resort</a>
+              </div>
+            </article>
+
+            <article class="hero-scroll__slide" data-start="0.2" data-end="0.4">
+              <span class="eyebrow eyebrow--light">Title First</span>
+              <h2>Every plot comes with documented land ownership</h2>
+              <p class="lead">Each unit is registered and handed over with sale deed and pokkuvaravu in your name — not a share certificate or pooled fund unit.</p>
+            </article>
+
+            <article class="hero-scroll__slide" data-start="0.4" data-end="0.6">
+              <span class="eyebrow eyebrow--light">Cultivation Science</span>
+              <h2>Grown with IWST's Hestorium methodology</h2>
+              <p class="lead">We work with the Institute of Wood Science and Technology, Bangalore to pursue heartwood formation on a shorter, better-documented timeline.</p>
+            </article>
+
+            <article class="hero-scroll__slide" data-start="0.6" data-end="0.8">
+              <span class="eyebrow eyebrow--light">On-Ground Security</span>
+              <h2>Fencing, CCTV and patrol from day one</h2>
+              <p class="lead">Perimeter fencing upgraded over five years, CCTV surveillance, motion-detect sapling chips, and patrol coverage protect your trees for the long term.</p>
+            </article>
+
+            <article class="hero-scroll__slide" data-start="0.8" data-end="1">
+              <span class="eyebrow eyebrow--light">Pulpally, Wayanad</span>
+              <h2>Three ways to be part of the sandalwood story</h2>
+              <p class="lead">From plantation plots to eco-resort cottages and integrated farm tourism — choose the project that fits your budget and timeline.</p>
+              <div class="hero-cta-row">
+                <a href="{{ contact.whatsapp_enquiry_url }}" class="btn btn-gold" target="_blank" rel="noopener noreferrer">Enquire Now</a>
+                <a href="{% url 'projects' %}" class="btn btn-ghost-light">View All Projects</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="hero-scroll__hint" aria-hidden="true">
+            <span class="hero-scroll__hint-line"></span>
+            Scroll to explore
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap motion-bridge">
+  <div class="finder-bar">
+    <div class="finder-field">
+      <div>
+        <label>Project</label>
+        <select name="project">
+          <option>Sandalwood Group Farming</option>
+          <option>Sandalwood Cave Forest</option>
+          <option>Sandalwood Farm Forest</option>
+        </select>
+      </div>
+    </div>
+    <div class="finder-field">
+      <div>
+        <label>Plot Size</label>
+        <select name="plot_size">
+          <option>5 Cents</option>
+          <option>10 Cents</option>
+          <option>Custom / Acreage</option>
+        </select>
+      </div>
+    </div>
+    <div class="finder-field">
+      <div>
+        <label>Budget</label>
+        <select name="budget">
+          <option>Under ₹5 Lakh</option>
+          <option>₹5 – ₹25 Lakh</option>
+          <option>EMI Plan</option>
+          <option>₹25 Lakh +</option>
+        </select>
+      </div>
+    </div>
+    <a href="#" class="btn btn-dark" data-whatsapp-finder>Search Plots</a>
+  </div>
+</div>
+
+<div class="wrap" data-motion="reveal">
+  <div class="stat-strip">
+    <div class="stat-item"><div class="stat-num">1,000+</div><div class="stat-label">Customers Onboarded</div></div>
+    <div class="stat-item"><div class="stat-num">20+</div><div class="stat-label">Public Recognitions</div></div>
+    <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label">Acres Under Cultivation</div></div>
+    <div class="stat-item"><div class="stat-num">2024</div><div class="stat-label">Group Farming Founded</div></div>
+  </div>
+</div>
+
+<section class="video-section">
+  <div class="wrap">
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/ZVWW-0bdcZg" title="Juspaid International — Sandalwood Plantation in Wayanad" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div>
+        <span class="eyebrow">Why Juspaid</span>
+        <h2>A plantation model built on title, security and science</h2>
+      </div>
+      <p>We bring together land title transparency, IWST's accelerated cultivation research, and physical security — so a 15-year asset is something you can actually trust.</p>
+    </div>
+
+    <div class="feature-grid" data-motion-stagger>
+      <div class="feature-card is-accent" data-motion-child>
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+        </div>
+        <h3>Documented Title</h3>
+        <p>Every plot is registered and handed over with sale deed and land transfer documents in your name — not a share certificate.</p>
+      </div>
+      <div class="feature-card" data-motion-child>
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>IWST Cultivation Science</h3>
+        <p>Grown using the Hestorium methodology developed with the Institute of Wood Science and Technology, Bangalore.</p>
+      </div>
+      <div class="feature-card" data-motion-child>
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0110 0v3"/></svg>
+        </div>
+        <h3>On-Ground Security</h3>
+        <p>Perimeter fencing upgraded over five years, CCTV surveillance, motion-detect sapling chips, and patrol coverage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div>
+        <span class="eyebrow">The Sandalwood Opportunity</span>
+        <h2>Why this matters more than most people realise</h2>
+      </div>
+    </div>
+    <div class="ring-row" data-motion-stagger>
+      <div class="ring-stat" data-motion-child>
+        <div class="ring-graphic"></div>
+        <div><div class="ring-num">6,000T</div><div class="ring-label">Annual global demand for sandalwood heartwood</div></div>
+      </div>
+      <div class="ring-stat" data-motion-child>
+        <div class="ring-graphic"></div>
+        <div><div class="ring-num">&lt;100T</div><div class="ring-label">Approximate annual Indian production today</div></div>
+      </div>
+      <div class="ring-stat" data-motion-child>
+        <div class="ring-graphic"></div>
+        <div><div class="ring-num">10–15 yrs</div><div class="ring-label">Typical harvest cycle under modern cultivation methods</div></div>
+      </div>
+    </div>
+    <p data-motion="reveal" class="motion-reveal--subtle home-opportunity-note">
+      Sandalwood cultivation by private individuals was restricted in India until regulations were relaxed in the early 2000s. Demand from perfumery, cosmetics and traditional-use industries continues to outstrip domestic supply — which is the gap our plantation projects are built around.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div>
+        <span class="eyebrow">Our Projects</span>
+        <h2>Three ways to be part of Wayanad's sandalwood story</h2>
+      </div>
+      <p>From a fenced plantation plot to a fully managed eco-resort cottage, choose the project that fits your budget and timeline.</p>
+    </div>
+
+    <div class="card-grid" data-motion-stagger>
+      <div class="prop-card" data-motion-child>
+        <div class="img-wrap">
+          <img src="{% static 'img/sandalwoodgroupfarming.webp' %}" alt="Sandalwood sapling plantation row">
+          <span class="prop-tag">Plantation</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-loc">📍 Pulpally, Wayanad</div>
+          <h3>Sandalwood Group Farming</h3>
+          <div class="prop-meta"><span>5 Cents</span><span>20 Trees</span><span>Titled Land</span></div>
+          <div class="prop-foot">
+            <span class="prop-price">From ₹20,000/mo EMI</span>
+            <a href="{% url 'group_farming' %}" class="btn btn-outline btn-sm">View Plot</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prop-card" data-motion-child>
+        <div class="img-wrap">
+          <img src="{% static 'img/sandlwoodcaveforest.jpg' %}" alt="Sandalwood Cave Forest eco resort">
+          <span class="prop-tag">Eco Resort</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-loc">📍 Pulpally, Wayanad</div>
+          <h3>Sandalwood Cave Forest</h3>
+          <div class="prop-meta"><span>570 sq.ft cottage</span><span>16 Trees/plot</span><span>Private Pool</span></div>
+          <div class="prop-foot">
+            <span class="prop-price">Managed Resort Cottage</span>
+            <a href="{% url 'cave_resort' %}" class="btn btn-outline btn-sm">View Resort</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prop-card" data-motion-child>
+        <div class="img-wrap">
+          <img src="{% static 'img/sandlwoodfarmforest.png' %}" alt="Integrated farm with poultry and vegetation">
+          <span class="prop-tag">Farm Tourism</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-loc">📍 Pulpally, Wayanad</div>
+          <h3>Sandalwood Farm Forest</h3>
+          <div class="prop-meta"><span>12 Acres</span><span>6 Income Streams</span><span>Research Centre</span></div>
+          <div class="prop-foot">
+            <span class="prop-price">Shares from ₹1 Lakh</span>
+            <a href="{% url 'farm_forest' %}" class="btn btn-outline btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div>
+        <span class="eyebrow">From Our Community</span>
+        <h2>What landowners and partners say</h2>
+      </div>
+    </div>
+    <div class="testi-grid" data-motion-stagger>
+      <div class="testi-card" data-motion-child>
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote">"What convinced me was the title transfer happening on paper, not just a brochure promise. I visited the Pulpally site myself before signing."</p>
+        <div class="testi-person">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="">
+          <div><div class="testi-name">Anil Kumar</div><div class="testi-loc">Kochi, Kerala</div></div>
+        </div>
+      </div>
+      <div class="testi-card" data-motion-child>
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote">"Took the EMI route on a 5-cent plot. The site visit and the security setup — fencing, CCTV — gave me confidence this isn't a paper plantation."</p>
+        <div class="testi-person">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop" alt="">
+          <div><div class="testi-name">Priya Menon</div><div class="testi-loc">Thiruvananthapuram, Kerala</div></div>
+        </div>
+      </div>
+      <div class="testi-card" data-motion-child>
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote">"Booked an early access pass to the Cave Forest resort before it opened. Looking forward to the first stay once construction wraps up."</p>
+        <div class="testi-person">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop" alt="">
+          <div><div class="testi-name">Rahul Varghese</div><div class="testi-loc">Dubai, UAE</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" data-motion="reveal">
+  <div class="cta-banner">
+    <div>
+      <h2>Plan a site visit to Pulpally before you decide</h2>
+      <p>See the fencing, the saplings, and the resort construction in person. No obligation — just bring your questions.</p>
+    </div>
+    <a href="{{ contact.whatsapp_site_visit_url }}" class="btn btn-ghost-light" target="_blank" rel="noopener noreferrer">Schedule a Visit</a>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/hero-scroll.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends "pages/base.html" %}
+{% block body_class %}motion-page page-inner{% endblock %}
+{% block title %}How to Invest — Juspaid International{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="wrap" data-motion="reveal">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="sep">/</span><span>Invest</span></div>
+    <span class="eyebrow" style="display:flex;justify-content:center;">Getting Started</span>
+    <h1>How to Invest</h1>
+    <p>The process from first enquiry to holding title documents in your hand.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div><span class="eyebrow">Process</span><h2>From enquiry to title transfer</h2></div>
+    </div>
+    <div class="timeline" data-motion-stagger>
+      <div class="timeline-step" data-motion-child>
+        <div class="timeline-dot">1</div>
+        <h4>Enquiry</h4>
+        <p>Tell us which project interests you and your approximate budget using the form below.</p>
+      </div>
+      <div class="timeline-step" data-motion-child>
+        <div class="timeline-dot">2</div>
+        <h4>Site Visit</h4>
+        <p>We arrange a visit to Pulpally so you can see the plantation, security setup, and resort construction.</p>
+      </div>
+      <div class="timeline-step" data-motion-child>
+        <div class="timeline-dot">3</div>
+        <h4>Documentation</h4>
+        <p>Review the sale agreement, payment plan, and title documents with our team before signing.</p>
+      </div>
+      <div class="timeline-step" data-motion-child>
+        <div class="timeline-dot">4</div>
+        <h4>Title Transfer</h4>
+        <p>Sale deed and pokkuvaravu registered in your name, with documents handed over.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-copy" data-motion="reveal">
+        <span class="eyebrow">Choose Your Entry Point</span>
+        <h2>Pick what fits your budget</h2>
+        <p>Full plots, EMI plans, smaller share-based programmes, or day passes — there's a way to start regardless of how much capital you're working with.</p>
+        <ul class="tick-list">
+          <li><span class="tick">✓</span> Full 5-cent plot — ₹25,00,000 one-time</li>
+          <li><span class="tick">✓</span> EMI plot ownership — from ₹20,000/month</li>
+          <li><span class="tick">✓</span> Farm Forest poultry share — from ₹1,00,000</li>
+          <li><span class="tick">✓</span> Cave Forest day pass — ₹20,000</li>
+        </ul>
+        <div class="note">
+          <strong>Before you commit funds:</strong> Land and agri-business investments carry genuine risk — crop loss, regulatory change, construction delays, and market price movement can all affect outcomes. We are not a registered financial or legal advisor; please review all documents independently, and with your own lawyer or financial advisor, before paying anything.
+        </div>
+      </div>
+
+      <div class="form-card" data-motion="reveal">
+        <h3 style="margin-bottom:6px;">Send an Enquiry</h3>
+        <p style="font-size:13.5px;color:var(--heartwood-2);margin-bottom:22px;">Your enquiry will open in WhatsApp to {{ contact.whatsapp_display }}.</p>
+        <form data-whatsapp-form="invest" novalidate>
+          <div class="form-row">
+            <div class="field"><label>Full Name</label><input type="text" name="name" required></div>
+            <div class="field"><label>Phone Number</label><input type="tel" name="phone" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label>Email</label><input type="email" name="email" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Project of Interest</label>
+              <select name="project">
+                <option>Sandalwood Group Farming</option>
+                <option>Sandalwood Cave Forest</option>
+                <option>Sandalwood Farm Forest</option>
+                <option>Upcoming Projects</option>
+                <option>Not Sure Yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Budget Range</label>
+              <select name="budget">
+                <option>Under ₹5 Lakh</option>
+                <option>₹5 – ₹25 Lakh</option>
+                <option>EMI Plan</option>
+                <option>₹25 Lakh – ₹1 Cr</option>
+                <option>₹1 Cr +</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label>Message (optional)</label><textarea name="message" placeholder="Any specific questions about plot availability, site visits, or documentation..."></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-dark btn-block">Send via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div><span class="eyebrow">Become a Partner</span><h2>Join the Juspaid community</h2></div>
+    </div>
+    <div class="feature-grid" data-motion-stagger>
+      <div class="feature-card" data-motion-child>
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0112 0v2"/></svg></div>
+        <h3>Promoter Programme</h3>
+        <p>Existing investors can refer new landowners and take part in our partner network — ask our team for current terms.</p>
+      </div>
+      <div class="feature-card" data-motion-child>
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
+        <h3>Weekly Learning Sessions</h3>
+        <p>Monday–Saturday community sessions covering cultivation updates, project progress, and Q&amp;A with the team.</p>
+      </div>
+      <div class="feature-card" data-motion-child>
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+        <h3>Live Project Updates</h3>
+        <p>Regular live sessions on construction progress, plantation growth, and new project announcements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

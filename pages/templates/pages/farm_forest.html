@@ -1,0 +1,102 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block body_class %}motion-page page-inner{% endblock %}
+{% block title %}Sandalwood Farm Forest — Integrated Farm Tourism, Wayanad{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="wrap" data-motion="reveal">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="sep">/</span><span>Farm Forest</span></div>
+    <span class="eyebrow" style="display:flex;justify-content:center;">Project 03 · In Development</span>
+    <h1>Sandalwood Farm Forest</h1>
+    <p>A 12-acre integrated farm tourism and sandalwood research project — combining cultivation, agri-income streams, and visitor experiences.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap" data-motion="reveal">
+    <div class="page-hero-banner">
+      <img src="{% static 'img/Western Ghats forest landscape.png' %}" alt="Integrated farm with crops and livestock in Wayanad">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div><span class="eyebrow">The Concept</span><h2>Integrated Farm Tourism &amp; Sandalwood Research Centre</h2></div>
+      <p>Six income streams running alongside sandalwood cultivation, plus Kerala's first dedicated sandalwood research facility.</p>
+    </div>
+    <div class="feature-grid" data-motion-stagger>
+      <div class="feature-card" data-motion-child>
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Cattle &amp; Poultry</h3>
+        <p>Cattle rearing and a large-scale chicken farm form two of the six planned income streams on site.</p>
+      </div>
+      <div class="feature-card" data-motion-child>
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6m0 0a4 4 0 100 8 4 4 0 000-8z"/></svg></div>
+        <h3>Duck &amp; Fish Farming</h3>
+        <p>Integrated duck and fish farming designed to work alongside the existing cultivation plan.</p>
+      </div>
+      <div class="feature-card" data-motion-child>
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11z"/></svg></div>
+        <h3>Vegetables, Marigold &amp; Ginger</h3>
+        <p>Vegetable cultivation alongside marigold and ginger crops, already underway on parts of the site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="split" data-motion="reveal">
+      <div class="split-copy">
+        <span class="eyebrow">Poultry Share Programme</span>
+        <h2>A share-based entry point into the chicken farm</h2>
+        <p>The chicken farm component is structured as a share programme: 10,000 shares at ₹1 lakh each, tied to a planned operation of roughly one lakh birds.</p>
+        <ul class="tick-list">
+          <li><span class="tick">✓</span> Entry per share: ₹1,00,000</li>
+          <li><span class="tick">✓</span> Planned scale: ~1,00,000 birds</li>
+          <li><span class="tick">✓</span> Income source: egg production</li>
+        </ul>
+        <div class="note">
+          <strong>On projected returns:</strong> Per-share egg revenue figures quoted for this programme are forward projections based on planned scale, not a guaranteed payout. Actual returns depend on flock health, market egg prices, and operating costs. Ask for the share agreement and audited terms before investing.
+        </div>
+      </div>
+      <div class="split-media">
+        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1000&auto=format&fit=crop" alt="Poultry farm">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div><span class="eyebrow">Research &amp; Stay</span><h2>Sandalwood research centre, A-frame cottages and cave houses</h2></div>
+    </div>
+    <div class="chip-grid" data-motion="reveal">
+      <span class="chip"><span class="dot"></span> Kerala's first dedicated sandalwood research centre</span>
+      <span class="chip"><span class="dot"></span> A-frame cottages</span>
+      <span class="chip"><span class="dot"></span> Cave house units</span>
+      <span class="chip"><span class="dot"></span> Farm-tourism visitor trails</span>
+      <span class="chip"><span class="dot"></span> Sandalwood cultivation demonstration plots</span>
+    </div>
+    <div class="note mt-40" data-motion="reveal">
+      <strong>On combined returns:</strong> Approximate figures shared in project presentations (e.g. a ₹1 lakh investment returning around ₹15 lakh after 15 years, inclusive of sandalwood cultivation gains) are illustrative projections over a long, uncertain timeframe — not a fixed or assured outcome. Treat any such figure as a planning estimate and confirm current terms directly with our investment team.
+    </div>
+  </div>
+</section>
+
+<div class="wrap" data-motion="reveal">
+  <div class="cta-banner">
+    <div>
+      <h2>See the Farm Forest site as it develops</h2>
+      <p>Cultivation and infrastructure work are both underway — ask us for the latest progress photos and a site visit.</p>
+    </div>
+    <a href="{{ contact.whatsapp_site_visit_url }}" class="btn btn-ghost-light" target="_blank" rel="noopener noreferrer">Request a Visit</a>
+  </div>
+</div>
+
+{% endblock %}

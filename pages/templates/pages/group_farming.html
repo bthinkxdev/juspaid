@@ -1,0 +1,187 @@
+{% extends "pages/base.html" %}
+{% block body_class %}motion-page page-inner{% endblock %}
+{% block title %}Sandalwood Group Farming — Plantation Plots in Wayanad{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="wrap" data-motion="reveal">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="sep">/</span><span>Group Farming</span></div>
+    <span class="eyebrow" style="display:flex;justify-content:center;">Project 01 · SWGFWA</span>
+    <h1>Sandalwood Group Farming</h1>
+    <p>Titled 5-cent plantation plots, fenced and secured, growing Indian White Sandalwood in Pulpally, Wayanad.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="video-frame video-frame--clean page-hero-banner">
+      <iframe src="https://www.youtube.com/embed/Hc3qoiVYMt8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-copy" data-motion="reveal">
+        <span class="eyebrow">The Plot</span>
+        <h2>How a single unit is structured</h2>
+        <p>Larger properties of up to 10 acres are divided into individual 5-cent units. Each unit carries 20 sandalwood trees spaced roughly 10 feet apart, fully fenced, with title transferred to your name via registered sale deed.</p>
+        <ul class="tick-list">
+          <li><span class="tick">✓</span> 5 cents of titled land per unit</li>
+          <li><span class="tick">✓</span> 20 sandalwood trees, ~10 ft spacing</li>
+          <li><span class="tick">✓</span> Registered sale deed and land transfer (pokkuvaravu) included</li>
+          <li><span class="tick">✓</span> Perimeter fencing, upgraded to reinforced security after year 5</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="video-frame video-frame--short video-frame--clean">
+          <iframe src="https://www.youtube.com/embed/c5EQ7rpZ4tk" title="Sandalwood group farming plot overview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div>
+        <span class="eyebrow">Payment Options</span>
+        <h2>Two ways to own a plot</h2>
+      </div>
+    </div>
+    <div class="plan-grid" data-motion-stagger>
+      <div class="plan-card is-featured" data-motion-child>
+        <div class="plan-name">Full Payment</div>
+        <div class="plan-price">₹25,00,000</div>
+        <div class="plan-sub">One-time, plot handed over with full documentation</div>
+        <ul class="plan-list">
+          <li>✓ 5 cents · 20 trees</li>
+          <li>✓ Immediate title transfer</li>
+          <li>✓ Full fencing & security cover</li>
+          <li>✓ Priority site-visit scheduling</li>
+        </ul>
+        <a href="https://wa.me/{{ contact.whatsapp_phone }}?text={{ 'Hello, I would like to enquire about the Full Plot Plan (5 Cents) — Sandalwood Group Farming.'|urlencode }}" class="btn btn-gold btn-block" target="_blank" rel="noopener noreferrer">Enquire on This Plan</a>
+      </div>
+      <div class="plan-card" data-motion-child>
+        <div class="plan-name">EMI Plan A</div>
+        <div class="plan-price">₹20,000<span style="font-size:15px;">/mo</span></div>
+        <div class="plan-sub">Over 125 months</div>
+        <ul class="plan-list">
+          <li>✓ 5 cents · 20 trees</li>
+          <li>✓ Title transferred on completion of EMI</li>
+          <li>✓ No-interest instalment structure</li>
+          <li>✓ Flexible on missed-month catch-up</li>
+        </ul>
+        <a href="https://wa.me/{{ contact.whatsapp_phone }}?text={{ 'Hello, I would like to enquire about EMI Plan A (₹20,000/mo) — Sandalwood Group Farming.'|urlencode }}" class="btn btn-outline btn-block" target="_blank" rel="noopener noreferrer">Enquire on This Plan</a>
+      </div>
+      <div class="plan-card" data-motion-child>
+        <div class="plan-name">EMI Plan B</div>
+        <div class="plan-price">₹25,000<span style="font-size:15px;">/mo</span></div>
+        <div class="plan-sub">Over 100 months</div>
+        <ul class="plan-list">
+          <li>✓ 5 cents · 20 trees</li>
+          <li>✓ Title transferred on completion of EMI</li>
+          <li>✓ Shorter tenure option</li>
+          <li>✓ Flexible on missed-month catch-up</li>
+        </ul>
+        <a href="https://wa.me/{{ contact.whatsapp_phone }}?text={{ 'Hello, I would like to enquire about EMI Plan B (₹25,000/mo) — Sandalwood Group Farming.'|urlencode }}" class="btn btn-outline btn-block" target="_blank" rel="noopener noreferrer">Enquire on This Plan</a>
+      </div>
+    </div>
+    <div class="note mt-40 motion-reveal--subtle" data-motion="reveal">
+      <strong>On returns:</strong> Sandalwood prices have risen historically and heartwood is in chronic short supply, but future price and harvest value depend on market conditions at the time of harvest (typically 10–15 years out), tree survival, and heartwood yield — none of which can be guaranteed. Treat any return figure quoted to you verbally as an illustration, not a promise, and ask for it in writing before deciding.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div>
+        <span class="eyebrow">Security & Monitoring</span>
+        <h2>What protects your trees for the next 10–15 years</h2>
+      </div>
+    </div>
+    <div class="chip-grid" data-motion="reveal">
+      <span class="chip"><span class="dot"></span> Perimeter fencing (upgraded after year 5)</span>
+      <span class="chip"><span class="dot"></span> CCTV surveillance across the plantation</span>
+      <span class="chip"><span class="dot"></span> Motion-detect sapling sensors (IWST / Hitachi-supported)</span>
+      <span class="chip"><span class="dot"></span> Dog patrol units</span>
+      <span class="chip"><span class="dot"></span> Armed security personnel</span>
+      <span class="chip"><span class="dot"></span> Periodic growth monitoring & reporting</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div>
+        <span class="eyebrow">Cultivation Timeline</span>
+        <h2>What happens between planting and harvest</h2>
+      </div>
+    </div>
+    <div class="timeline" data-motion-stagger>
+      <div class="timeline-step" data-motion-child>
+        <div class="timeline-dot">Y0</div>
+        <h4>Planting & Title</h4>
+        <p>Saplings planted under the Hestorium methodology; your sale deed and pokkuvaravu are registered.</p>
+      </div>
+      <div class="timeline-step" data-motion-child>
+        <div class="timeline-dot">Y1-5</div>
+        <h4>Establishment</h4>
+        <p>Standard fencing, growth monitoring, and routine plantation maintenance.</p>
+      </div>
+      <div class="timeline-step" data-motion-child>
+        <div class="timeline-dot">Y5+</div>
+        <h4>Security Upgrade</h4>
+        <p>Fencing reinforced, CCTV and sensor coverage intensified as heartwood value increases.</p>
+      </div>
+      <div class="timeline-step" data-motion-child>
+        <div class="timeline-dot">Y10-15</div>
+        <h4>Harvest Window</h4>
+        <p>Heartwood maturity assessed; harvest carried out per applicable forest department regulations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div><span class="eyebrow">FAQ</span><h2>Common questions about Group Farming</h2></div>
+    </div>
+    <div>
+      <div class="faq-item open">
+        <div class="faq-q"><span>Do I get full legal ownership of the land?</span><span class="plus">+</span></div>
+        <div class="faq-a">Yes — each unit is transferred via registered sale deed and pokkuvaravu in your name, not a share or fund unit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can I visit the plantation before paying?</span><span class="plus">+</span></div>
+        <div class="faq-a">Yes, site visits to Pulpally can be arranged through our Contact page before you commit to a plot.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What happens if I miss an EMI payment?</span><span class="plus">+</span></div>
+        <div class="faq-a">The instalment plans are structured to be flexible — speak with our team about catch-up terms specific to your plan.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Who harvests the trees, and can I sell privately?</span><span class="plus">+</span></div>
+        <div class="faq-a">Sandalwood harvest and sale in India is regulated. Harvesting and disposal of mature trees is carried out in line with applicable forest department rules at the time of harvest — we'll confirm current regulations with you closer to maturity.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" data-motion="reveal">
+  <div class="cta-banner">
+    <div>
+      <h2>Reserve a plot or ask about availability</h2>
+      <p>Speak to our team about current plot availability in Pulpally before pricing changes.</p>
+    </div>
+    <a href="{{ contact.whatsapp_enquiry_url }}" class="btn btn-ghost-light" target="_blank" rel="noopener noreferrer">Check Plot Availability</a>
+  </div>
+</div>
+
+{% endblock %}

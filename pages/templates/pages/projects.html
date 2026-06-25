@@ -1,0 +1,98 @@
+{% extends "pages/base.html" %}
+{% block body_class %}motion-page page-inner{% endblock %}
+{% block title %}Upcoming Projects — Juspaid International{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="wrap" data-motion="reveal">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="sep">/</span><span>Projects</span></div>
+    <span class="eyebrow" style="display:flex;justify-content:center;">What's Next</span>
+    <h1>Upcoming Projects</h1>
+    <p>Beyond sandalwood cultivation, here's what's in planning across our broader portfolio. Details for these are still being finalised.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="card-grid" data-motion-stagger>
+
+      <div class="prop-card" data-motion-child>
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=900&auto=format&fit=crop" alt="Sports academy building concept">
+          <span class="prop-tag">Planning Stage</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-loc">📍 Kakkanad, Kochi</div>
+          <h3>Horizon — Sports &amp; Business School</h3>
+          <p class="prop-meta">A combined sports academy and business school campus planned for Kakkanad.</p>
+        </div>
+      </div>
+
+      <div class="prop-card" data-motion-child>
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=900&auto=format&fit=crop" alt="Township development concept">
+          <span class="prop-tag">Planning Stage</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-loc">📍 Nedumbassery, Kochi</div>
+          <h3>Fragrant Avenue Township</h3>
+          <p class="prop-meta">A 26-acre township development near Nedumbassery, close to Cochin International Airport.</p>
+        </div>
+      </div>
+
+      <div class="prop-card" data-motion-child>
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=900&auto=format&fit=crop" alt="Apartment building concept">
+          <span class="prop-tag">Planning Stage</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-loc">📍 Kozhikode</div>
+          <h3>Zamoria Apartments</h3>
+          <p class="prop-meta">A residential apartment project planned for Kozhikode city.</p>
+        </div>
+      </div>
+
+      <div class="prop-card" data-motion-child>
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=900&auto=format&fit=crop" alt="Industrial waste processing facility concept">
+          <span class="prop-tag">Early Planning</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-loc">📍 Location TBA</div>
+          <h3>Bio-Medical Waste Processing</h3>
+          <p class="prop-meta">A proposed waste-processing technology venture, planned in partnership with research institutions. Capital and timeline are still being finalised.</p>
+        </div>
+      </div>
+
+      <div class="prop-card" data-motion-child>
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=900&auto=format&fit=crop" alt="Amusement park concept">
+          <span class="prop-tag">Early Planning</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-loc">📍 Location TBA</div>
+          <h3>Amusement Park</h3>
+          <p class="prop-meta">A family entertainment park under early-stage planning as part of our wider tourism portfolio.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="note mt-40" data-motion="reveal">
+      <strong>About this page:</strong> Projects listed here are in planning or early development and details — including location, scale, capital required, and timelines — may change before launch. We'll publish full specifics as each project is confirmed. Please don't commit funds to a project based on this page alone; contact us for current status.
+    </div>
+  </div>
+</section>
+
+<div class="wrap" data-motion="reveal">
+  <div class="cta-banner">
+    <div>
+      <h2>Want early updates on new projects?</h2>
+      <p>Join our community programme to hear about new launches before public announcement.</p>
+    </div>
+    <a href="{{ contact.whatsapp_enquiry_url }}" class="btn btn-ghost-light" target="_blank" rel="noopener noreferrer">Join the Community</a>
+  </div>
+</div>
+
+{% endblock %}

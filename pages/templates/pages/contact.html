@@ -1,0 +1,75 @@
+{% extends "pages/base.html" %}
+{% block body_class %}motion-page page-inner{% endblock %}
+{% block title %}Contact Us — Juspaid International{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="wrap" data-motion="reveal">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="sep">/</span><span>Contact</span></div>
+    <span class="eyebrow" style="display:flex;justify-content:center;">Get In Touch</span>
+    <h1>Contact {{ contact_name }}</h1>
+    <p>Reach {{ contact_name }}, franchise partner for {{ company_name }}, via WhatsApp or the form below.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap">
+    <div class="split">
+      <div class="form-card" data-motion="reveal">
+        <h3 style="margin-bottom:6px;">Send a Message</h3>
+        <p style="font-size:13.5px;color:var(--heartwood-2);margin-bottom:22px;">Your details will open in WhatsApp to {{ contact.whatsapp_display }}.</p>
+        <form data-whatsapp-form="contact" novalidate>
+          <div class="form-row">
+            <div class="field"><label>Full Name</label><input type="text" name="name" required></div>
+            <div class="field"><label>Phone Number</label><input type="tel" name="phone" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label>Email</label><input type="email" name="email" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field full">
+              <label>Reason for Contact</label>
+              <select name="reason">
+                <option>Schedule a Site Visit</option>
+                <option>General Enquiry</option>
+                <option>Existing Customer Support</option>
+                <option>Media / Partnership</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label>Message</label><textarea name="message" required></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-dark btn-block">Send via WhatsApp</button>
+        </form>
+      </div>
+
+      <div class="split-copy" data-motion="reveal">
+        <span class="eyebrow">Franchise Partner</span>
+        <h2>{{ contact_name }}</h2>
+        <p style="margin-bottom:20px;">{{ contact_name }} holds the franchise for {{ company_name }} and handles all enquiries, site visits, and customer connections for this region.</p>
+        <ul class="tick-list" style="margin-top:24px;">
+          <li><span class="tick">✓</span><strong>Company —</strong>&nbsp;{{ company_name }}</li>
+          <li><span class="tick">✓</span><strong>Address —</strong>&nbsp;{{ contact.address_full }}</li>
+          <li><span class="tick">✓</span><strong>WhatsApp —</strong>&nbsp;<a href="{{ contact.whatsapp_enquiry_url }}" target="_blank" rel="noopener noreferrer">{{ contact.whatsapp_display }}</a></li>
+          <li><span class="tick">✓</span><strong>Email —</strong>&nbsp;<a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
+          <li><span class="tick">✓</span><strong>Hours —</strong>&nbsp;{{ contact.hours }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" data-motion="reveal">
+      <div><span class="eyebrow">Project Location</span><h2>Pulpally, Wayanad</h2></div>
+    </div>
+    <div class="map-frame">
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=76.05%2C11.75%2C76.20%2C11.90&layer=mapnik"></iframe>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

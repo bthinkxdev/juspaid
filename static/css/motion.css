@@ -1,0 +1,130 @@
+/* ===================================================================
+   MOTION DESIGN TOKENS
+   Shared across pages — durations, easings, distances, lerp rates
+   =================================================================== */
+:root {
+  /* Durations */
+  --motion-duration-instant: 120ms;
+  --motion-duration-fast: 280ms;
+  --motion-duration-base: 520ms;
+  --motion-duration-slow: 780ms;
+
+  /* Easings (iOS-style deceleration curves) */
+  --motion-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --motion-ease-spring: cubic-bezier(0.34, 1.28, 0.64, 1);
+
+  /* Spatial */
+  --motion-distance-xs: 8px;
+  --motion-distance-sm: 14px;
+  --motion-distance-md: 24px;
+  --motion-distance-lg: 40px;
+  --motion-distance-xl: 56px;
+  --motion-blur: 6px;
+  --motion-stagger-step: 0.07;
+
+  /* JS lerp rates (0–1 per frame @ 60fps) — read by motion.js */
+  --motion-lerp-reveal: 0.11;
+  --motion-reveal-start: 0.92;
+  --motion-reveal-end: 0.38;
+}
+
+/* ===================================================================
+   SECTION REVEAL (scroll-linked via --motion-p)
+   =================================================================== */
+[data-motion="reveal"] {
+  --motion-p: 0;
+  opacity: 1;
+  transform: translate3d(
+    0,
+    calc((1 - var(--motion-p)) * var(--motion-distance-lg)),
+    0
+  );
+  will-change: transform;
+}
+
+[data-motion="reveal"].motion-reveal--blur {
+  filter: none;
+  will-change: transform;
+}
+
+[data-motion="reveal"].motion-reveal--subtle {
+  transform: translate3d(
+    0,
+    calc((1 - var(--motion-p)) * var(--motion-distance-md)),
+    0
+  );
+}
+
+[data-motion-child] {
+  --motion-p: 0;
+  opacity: 1;
+  transform: translate3d(
+    0,
+    calc((1 - var(--motion-p)) * var(--motion-distance-md)),
+    0
+  );
+  will-change: transform;
+}
+
+.gallery-grid [data-motion-child] {
+  transform: translate3d(
+    0,
+    calc((1 - var(--motion-p)) * var(--motion-distance-sm)),
+    0
+  );
+}
+
+[data-motion-stagger] [data-motion-child]:nth-child(1) { --motion-delay: 0; }
+[data-motion-stagger] [data-motion-child]:nth-child(2) { --motion-delay: 1; }
+[data-motion-stagger] [data-motion-child]:nth-child(3) { --motion-delay: 2; }
+[data-motion-stagger] [data-motion-child]:nth-child(4) { --motion-delay: 3; }
+[data-motion-stagger] [data-motion-child]:nth-child(5) { --motion-delay: 4; }
+[data-motion-stagger] [data-motion-child]:nth-child(6) { --motion-delay: 5; }
+
+.motion-bridge {
+  --motion-p: 0;
+  opacity: 1;
+  transform: translate3d(
+    0,
+    calc((1 - var(--motion-p)) * var(--motion-distance-sm)),
+    0
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-motion="reveal"],
+  [data-motion-child],
+  .motion-bridge {
+    transform: none !important;
+    will-change: auto;
+  }
+}
+
+/* ===================================================================
+   EMBED SAFETY — iframes break inside transformed ancestors (YouTube
+   spinner never finishes). Disable motion transform on embed hosts.
+   =================================================================== */
+[data-motion="reveal"]:has(iframe),
+[data-motion="reveal"]:has(.video-frame),
+[data-motion-child]:has(iframe),
+[data-motion-child]:has(.video-frame),
+[data-motion-child]:has(.update-card__video),
+.video-section[data-motion="reveal"],
+.map-frame[data-motion="reveal"] {
+  transform: none !important;
+  will-change: auto;
+}
+
+.video-frame,
+.update-card__video,
+.map-frame {
+  transform: none !important;
+  isolation: isolate;
+}
+
+.video-frame iframe,
+.update-card__video iframe,
+.map-frame iframe {
+  transform: none !important;
+}

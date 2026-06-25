@@ -1,0 +1,56 @@
+{% extends "pages/base.html" %}
+{% block body_class %}motion-page page-inner{% endblock %}
+{% block title %}Gallery / Updates — Juspaid International{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="wrap" data-motion="reveal">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="sep">/</span><span>Gallery / Updates</span></div>
+    <span class="eyebrow" style="display:flex;justify-content:center;">Videos &amp; Shorts</span>
+    <h1>Gallery / Updates</h1>
+    <p>Latest plantation progress, resort construction, and news from Juspaid — newest first.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap">
+    {% if updates %}
+    <div class="updates-grid" data-motion-stagger>
+      {% for item in updates %}
+      <article class="update-card{% if item.is_short %} update-card--short{% endif %}">
+        <div class="update-card__media update-card__video">
+          <iframe
+            src="{{ item.embed_src }}"
+            title="{{ item.title }}"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="update-card__body" data-motion-child>
+          <time class="update-card__date" datetime="{{ item.created_at|date:'c' }}">{{ item.created_at|date:"j M Y" }}</time>
+          <h2 class="update-card__title">{{ item.title }}</h2>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="updates-empty" data-motion="reveal">
+      <p>No updates have been published yet. Check back soon for new videos and shorts from our projects.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<div class="wrap" data-motion="reveal">
+  <div class="cta-banner">
+    <div>
+      <h2>Want the latest news before it’s posted here?</h2>
+      <p>Message {{ contact_name }} on WhatsApp for site visits, plot availability, and project updates.</p>
+    </div>
+    <a href="{{ contact.whatsapp_enquiry_url }}" class="btn btn-ghost-light" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+  </div>
+</div>
+
+{% endblock %}

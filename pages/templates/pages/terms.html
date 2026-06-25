@@ -1,0 +1,64 @@
+{% extends "pages/base.html" %}
+{% block body_class %}motion-page page-inner{% endblock %}
+{% block title %}Investment Terms &amp; Disclosures — Juspaid International{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <div class="wrap" data-motion="reveal">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="sep">/</span><span>Investment Terms</span></div>
+    <span class="eyebrow" style="display:flex;justify-content:center;">Read Before You Invest</span>
+    <h1>Investment Terms &amp; Disclosures</h1>
+    <p>A plain-language summary of what we can and can't promise. Always confirm specifics in your signed agreement.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap" data-motion="reveal">
+    <div class="form-card" style="max-width:820px; margin:0 auto;">
+
+      <h3 style="margin-bottom:14px;">1. What you're actually buying</h3>
+      <p style="color:var(--heartwood-2); line-height:1.7; margin-bottom:24px; font-size:14.5px;">
+        Across our Group Farming and Cave Forest projects, you receive registered title to a specific, identified piece of land (via sale deed and pokkuvaravu), along with whatever trees, structures, or improvements are specified in your agreement. You are not purchasing a unit in a pooled investment fund unless explicitly stated. For share-based programmes like the Farm Forest poultry shares, you are buying a defined share in that specific venture as described in its own share agreement — read that agreement for the exact rights it gives you.
+      </p>
+
+      <h3 style="margin-bottom:14px;">2. Returns are not guaranteed</h3>
+      <p style="color:var(--heartwood-2); line-height:1.7; margin-bottom:24px; font-size:14.5px;">
+        Any figures discussed in presentations, on this website, or by our team — sandalwood price projections, harvest values, rental income estimates, or share payouts — are illustrative estimates based on current market data and project plans. They are not promises or guarantees. Actual outcomes depend on factors outside our control, including market prices at harvest time, tree survival and yield, construction timelines, occupancy rates, regulatory changes, and broader economic conditions.
+      </p>
+
+      <h3 style="margin-bottom:14px;">3. Long timelines carry real risk</h3>
+      <p style="color:var(--heartwood-2); line-height:1.7; margin-bottom:24px; font-size:14.5px;">
+        Sandalwood cultivation projects are typically structured around a 10–15 year harvest cycle. Over that time, plans can change, costs can shift, and not every tree will reach harvestable maturity. Resort and farm-tourism projects depend on completing construction and attracting visitors — both of which carry execution risk. Please invest only money you can afford to have tied up for a long period, with the possibility that actual returns differ from any estimate discussed with you.
+      </p>
+
+      <h3 style="margin-bottom:14px;">4. Harvest and sale are regulated</h3>
+      <p style="color:var(--heartwood-2); line-height:1.7; margin-bottom:24px; font-size:14.5px;">
+        Sandalwood cultivation by private landowners is currently permitted in India, but the harvesting and sale of mature sandalwood remains subject to forest department regulation, which can change over the life of your investment. We will share the regulatory process applicable at the time of your harvest, but cannot guarantee what those rules will be 10–15 years from now.
+      </p>
+
+      <h3 style="margin-bottom:14px;">5. We are not your financial or legal advisor</h3>
+      <p style="color:var(--heartwood-2); line-height:1.7; margin-bottom:24px; font-size:14.5px;">
+        Juspaid International is a land and project development company, not a registered investment advisory or law firm. Before committing funds, we encourage you to have your own lawyer review the sale deed and any agreement, and to speak with an independent financial advisor about how this fits your overall finances — particularly if you are considering a loan to fund your investment.
+      </p>
+
+      <h3 style="margin-bottom:14px;">6. Site visits and documentation</h3>
+      <p style="color:var(--heartwood-2); line-height:1.7; margin-bottom:0; font-size:14.5px;">
+        We encourage every prospective buyer to visit the Pulpally site in person and request all relevant documents — title records, survey numbers, construction status, and share agreements — before making payment. If anything described to you verbally differs from what's in writing, the written, signed agreement governs.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<div class="wrap" data-motion="reveal">
+  <div class="cta-banner">
+    <div>
+      <h2>Have questions about any of this?</h2>
+      <p>Our team can walk through documentation and terms with you before you decide anything.</p>
+    </div>
+    <a href="{{ contact.whatsapp_talk_url }}" class="btn btn-ghost-light" target="_blank" rel="noopener noreferrer">Talk to Us</a>
+  </div>
+</div>
+
+{% endblock %}

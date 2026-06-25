@@ -6,6 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>{% block title %}Juspaid International — Sandalwood Plantations &amp; Eco Resorts, Wayanad{% endblock %}</title>
 <meta name="description" content="{% block meta_description %}Juspaid International develops sandalwood plantation and eco-tourism land projects in Wayanad, Kerala — group farming, the Sandalwood Cave Forest resort, and integrated farm tourism.{% endblock %}">
+<link rel="canonical" href="{% block canonical_url %}{{ canonical_url }}{% endblock %}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Juspaid International">
+<meta property="og:url" content="{% block og_url %}{{ canonical_url }}{% endblock %}">
+<meta property="og:title" content="{% block og_title %}Juspaid International — Sandalwood Plantations &amp; Eco Resorts, Wayanad{% endblock %}">
+<meta property="og:description" content="{% block og_description %}Juspaid International develops sandalwood plantation and eco-tourism land projects in Wayanad, Kerala — group farming, the Sandalwood Cave Forest resort, and integrated farm tourism.{% endblock %}">
+<meta property="og:image" content="{% block og_image %}{{ og_image_url }}{% endblock %}">
+<meta property="og:image:alt" content="{% block og_image_alt %}Juspaid International — sandalwood plantations and eco resorts in Wayanad, Kerala{% endblock %}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% block twitter_title %}Juspaid International — Sandalwood Plantations &amp; Eco Resorts, Wayanad{% endblock %}">
+<meta name="twitter:description" content="{% block twitter_description %}Juspaid International develops sandalwood plantation and eco-tourism land projects in Wayanad, Kerala.{% endblock %}">
+<meta name="twitter:image" content="{% block twitter_image %}{{ og_image_url }}{% endblock %}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
 <link rel="stylesheet" href="{% static 'css/mobile.css' %}">

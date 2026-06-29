@@ -80,4 +80,44 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', onNavScroll, { passive: true });
     onNavScroll();
   }
+
+  // project detail modals (projects page)
+  var openModal = null;
+
+  function closeProjectModal() {
+    if (!openModal) return;
+    openModal.setAttribute('hidden', '');
+    openModal.setAttribute('aria-hidden', 'true');
+    openModal.classList.remove('is-open');
+    openModal = null;
+    document.body.classList.remove('project-modal-open');
+  }
+
+  function showProjectModal(modal) {
+    if (!modal) return;
+    closeProjectModal();
+    openModal = modal;
+    modal.removeAttribute('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+    modal.classList.add('is-open');
+    document.body.classList.add('project-modal-open');
+    var closeBtn = modal.querySelector('.project-modal__close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  document.querySelectorAll('[data-open-project-modal]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-open-project-modal');
+      var modal = document.getElementById('project-modal-' + id);
+      showProjectModal(modal);
+    });
+  });
+
+  document.querySelectorAll('[data-close-project-modal]').forEach(function (el) {
+    el.addEventListener('click', closeProjectModal);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeProjectModal();
+  });
 });

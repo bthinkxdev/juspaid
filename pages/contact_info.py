@@ -5,11 +5,11 @@ CONTACT_NAME = "Arun Kumar"
 CONTACT_ROLE = "Franchise Partner"
 WHATSAPP_PHONE = "919946299011"
 WHATSAPP_DISPLAY = "+91 99462 99011"
-EMAIL = "arunkumarnpppppp@gmail.com"
+EMAIL = "arunkumarnp@gmail.com"
 ADDRESS_LINES = (
     "Naduvilakunnal house",
     "Kulayattikara PO",
-    "Krrchary",
+    "Keechary",
     "Kerala, India",
 )
 HOURS = "Monday – Saturday, 9:30 AM – 6:00 PM"

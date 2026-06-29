@@ -470,6 +470,13 @@ body.nav-hidden .hero-scroll__canvas{
 /* homepage video embed */
 .video-section{ margin: -30px 0 10px; }
 .video-section--spaced{ margin-top: 28px; }
+.video-section__title{
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 4vw, 34px);
+  color: var(--forest-dark);
+  margin: 0 0 20px;
+}
 .video-frame{
   border-radius: var(--r-lg);
   overflow: hidden;
@@ -613,9 +620,109 @@ body.nav-hidden .hero-scroll__canvas{
 @media (max-width: 640px){ .card-grid, .card-grid.cols-2{ grid-template-columns: 1fr; } }
 
 /* ===================================================================
+   PROJECT DETAIL MODAL
+   =================================================================== */
+.project-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.project-modal[hidden]{ display: none; }
+.project-modal__backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 43, 28, 0.62);
+  backdrop-filter: blur(4px);
+}
+.project-modal__dialog{
+  position: relative;
+  width: min(760px, 100%);
+  max-height: min(88vh, 900px);
+  overflow: auto;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: 0 28px 80px rgba(31, 43, 28, 0.22);
+  padding: 34px 34px 30px;
+}
+.project-modal__close{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--cream-card);
+  color: var(--heartwood);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.project-modal__close:hover{
+  background: var(--forest-dark);
+  color: #fff;
+  border-color: var(--forest-dark);
+}
+.project-modal__header{
+  padding-right: 44px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 22px;
+}
+.project-modal__header h2{
+  font-size: clamp(24px, 4vw, 32px);
+  line-height: 1.15;
+  margin-top: 10px;
+}
+.project-modal__subtitle{
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--forest);
+  font-weight: 600;
+}
+.project-modal__section + .project-modal__section{
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.project-modal__section h3{
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.project-modal__section p{
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--heartwood-2);
+}
+.project-modal__section p + p{ margin-top: 12px; }
+.project-modal__list{ margin-top: 4px; }
+.project-modal__list li{
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--heartwood-2);
+}
+body.project-modal-open{ overflow: hidden; }
+@media (max-width: 640px){
+  .project-modal{ padding: 12px; align-items: flex-end; }
+  .project-modal__dialog{
+    max-height: 92vh;
+    padding: 26px 20px 22px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+/* ===================================================================
    TESTIMONIALS
    =================================================================== */
 .testi-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:22px; }
+.testi-grid--duo{ grid-template-columns: repeat(2,1fr); }
 .testi-card{ background: var(--cream-card); border:1px solid var(--line); border-radius: var(--r-md); padding:26px; }
 .testi-stars{ color: var(--turmeric); font-size:14px; margin-bottom:14px; letter-spacing:2px; }
 .testi-card p.quote{ font-size:14.5px; line-height:1.65; color: var(--heartwood-2); margin-bottom:20px; }
@@ -623,7 +730,7 @@ body.nav-hidden .hero-scroll__canvas{
 .testi-avatar{ width:44px; height:44px; border-radius:50%; object-fit:cover; background:var(--stone); }
 .testi-name{ font-weight:700; font-size:14px; }
 .testi-loc{ font-size:12.5px; color: var(--heartwood-2); }
-@media (max-width: 900px){ .testi-grid{ grid-template-columns:1fr; } }
+@media (max-width: 900px){ .testi-grid, .testi-grid--duo{ grid-template-columns:1fr; } }
 
 /* ===================================================================
    TIMELINE (process / cultivation cycle)
@@ -864,6 +971,20 @@ body.nav-hidden .hero-scroll__canvas{
 .footer-logo{ display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-size:21px; color:#fff; margin-bottom:14px; }
 .footer-grid p.about-text{ font-size:13.5px; color: rgba(255,255,255,0.6); line-height:1.7; max-width:280px; }
 .footer-bottom{ display:flex; justify-content:space-between; padding: 26px 0; font-size:12.5px; color: rgba(255,255,255,0.5); }
+.footer-credit{
+  padding: 0 0 22px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.42);
+  line-height: 1.6;
+}
+.footer-credit p{ margin: 0; }
+.footer-credit a{
+  color: rgba(255,255,255,0.62);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+.footer-credit a:hover{ color: var(--turmeric-lt); border-bottom-color: var(--turmeric-lt); }
 @media (max-width: 900px){ .footer-grid{ grid-template-columns: 1fr 1fr; } .footer-bottom{ flex-direction:column; gap:10px; text-align:center;} }
 
 /* sticky WhatsApp */
